@@ -26,16 +26,17 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="396dp">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -44,7 +45,7 @@
             <Button
                 android:id="@+id/btb8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -53,7 +54,7 @@
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -62,7 +63,7 @@
             <Button
                 android:id="@+id/btnDivide"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#0BA9F1"
                 android:text="%" />
@@ -70,12 +71,13 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -84,7 +86,7 @@
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -93,7 +95,7 @@
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -102,7 +104,7 @@
             <Button
                 android:id="@+id/btnMultiply"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#0BA9F1"
                 android:text="*" />
@@ -110,12 +112,13 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -124,7 +127,7 @@
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -133,7 +136,7 @@
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -142,7 +145,7 @@
             <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#0BA9F1"
                 android:text="-" />
@@ -150,12 +153,13 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnClear"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#BA791B"
                 android:text="C" />
@@ -163,7 +167,7 @@
             <Button
                 android:id="@+id/btn0"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#C5D531"
                 android:onClick="onClick"
@@ -172,7 +176,7 @@
             <Button
                 android:id="@+id/btnResult"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#BA791B"
                 android:text="=" />
@@ -180,7 +184,7 @@
             <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#0BA9F1"
                 android:text="+" />
