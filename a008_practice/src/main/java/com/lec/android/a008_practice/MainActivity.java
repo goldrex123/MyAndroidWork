@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     AddressbookAdapter adapter; //Adapter 객체
     RecyclerView rv;
     EditText etName, etAge, etAddr;
-    Addressbook addr = new Addressbook();
+    Addressbook addr;
     int age;
     String name, address;
     @Override
@@ -39,37 +39,39 @@ public class MainActivity extends AppCompatActivity {
         etAge = findViewById(R.id.etAge);
         etAddr = findViewById(R.id.etAddr);
 
-        etName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                addr.setName(etName.getText().toString().trim());
-
-                return false;
-            }
-        });
-
-        etAge.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                addr.setAge(etAge.getText().toString());
-                return false;
-            }
-        });
-
-        etAddr.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                addr.setAddr(etAddr.getText().toString());
-                return false;
-            }
-        });
+//        etName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                addr.setName(etName.getText().toString().trim());
+//
+//                return false;
+//            }
+//        });
+//
+//        etAge.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                addr.setAge(etAge.getText().toString());
+//                return false;
+//            }
+//        });
+//
+//        etAddr.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                addr.setAddr(etAddr.getText().toString());
+//                return false;
+//            }
+//        });
 
         Button btnAdd = findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter.addItem(addr);
+                adapter.addItem(new Addressbook(etName.getText().toString().trim(), etAge.getText().toString().trim(),
+                        etAddr.getText().toString()));
                 adapter.notifyDataSetChanged();
+
             }
         });
 //        initAdapter(adapter);

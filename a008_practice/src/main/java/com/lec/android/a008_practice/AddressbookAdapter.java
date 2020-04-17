@@ -25,7 +25,7 @@ public class AddressbookAdapter extends RecyclerView.Adapter<AddressbookAdapter.
     static AddressbookAdapter adapter;
 
 
-    public AddressbookAdapter() {}
+    public AddressbookAdapter() {this.adapter = this;}
 
     // onCreateViewHolder() : ViewHolder 가 생성될때 호출됨
     // 각 item 을 위해 정의한 레이아웃(ex:XML) 으로 View 객체를 만들어 줍니다.
@@ -94,6 +94,7 @@ public class AddressbookAdapter extends RecyclerView.Adapter<AddressbookAdapter.
                 @Override
                 public void onClick(View v) {
                     adapter.removeItem(getAdapterPosition());
+
                     adapter.notifyDataSetChanged();
                 }
             });
