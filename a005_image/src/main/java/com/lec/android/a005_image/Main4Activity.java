@@ -67,7 +67,6 @@ public class Main4Activity extends AppCompatActivity {
                            tvUrl.setText(imgUrl);
                        }
                    });
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
