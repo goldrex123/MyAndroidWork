@@ -49,7 +49,6 @@ public class Main3Activity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Toast.makeText(getApplicationContext(), "트래킹 종료", Toast.LENGTH_SHORT).show();
                 isTracking = false;
-
             }
         });
 

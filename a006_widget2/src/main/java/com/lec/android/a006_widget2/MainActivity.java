@@ -72,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
                     // 별도의 작업 쓰레드에서
                     // 메인 ui 접근하려면 반드시 Handler 사용해야 함.
                     handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            pb3.setProgress(value2);
-                        }
+                            @Override
+                            public void run() {
+                                pb3.setProgress(value2);
+                            }
                     });
                     try {
                         Thread.sleep(100);
