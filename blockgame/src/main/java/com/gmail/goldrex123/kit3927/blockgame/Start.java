@@ -42,9 +42,8 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
     private MediaPlayer mp;
 
     final int DIALOG_TIMEOVER = 1; //다이얼로그 ID
-
     Handler handler = new Handler(); // 시간,
-
+    GameThread thread1;
     class GameThread extends Thread {
         @Override
         public void run() {
@@ -74,13 +73,17 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
                                         // 게임 리셋하고, 새 게임 시작
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
-                                            time = 3;
+                                            time = 30;
                                             point = 0;
                                             tvTime.setText("시간 : " + time);
                                             tvPoint.setText("점수 : " + point);
-                                            new GameThread().start();
+                                            thread1 = new GameThread();
+                                            thread1.setDaemon(true);
+                                            thread1.start();
+
                                         }
-                                    });
+                                    })
+                            .setCancelable(false);
                             builder.show();
                         }
                     }
@@ -133,8 +136,9 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
         ivBlue.setOnClickListener(this);
 
         // 시간표시, 게임진행 쓰레드 시작하기
-        new GameThread().start();
-
+        thread1 = new GameThread();
+        thread1.setDaemon(true);
+        thread1.start();
 
     }
 
@@ -225,6 +229,11 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
             mp.stop();
             mp.release();
         }
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        thread1.interrupt();
     }
 }
