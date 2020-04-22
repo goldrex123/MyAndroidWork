@@ -11,6 +11,7 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -73,14 +74,13 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
                                         // 게임 리셋하고, 새 게임 시작
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
-                                            time = 30;
+                                            time = 3;
                                             point = 0;
                                             tvTime.setText("시간 : " + time);
                                             tvPoint.setText("점수 : " + point);
                                             thread1 = new GameThread();
                                             thread1.setDaemon(true);
                                             thread1.start();
-
                                         }
                                     })
                             .setCancelable(false);
@@ -232,8 +232,8 @@ public class Start extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        thread1.interrupt();
+    public void onBackPressed() {
+        Log.d("myapp", "??");
+        finish();
     }
 }
