@@ -18,6 +18,11 @@
         android:icon="@drawable/menu_settings"
         app:showAsAction="always"/>
 
+    <item
+        android:id="@+id/menu_alarm"
+        android:title="알람"
+        android:icon="@drawable/ic_alarm_black_18dp"
+        app:showAsAction="always" />
 
     <item android:id="@+id/menu_search"
         android:title="검색"
